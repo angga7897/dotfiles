@@ -1,0 +1,146 @@
+*{
+    font-family: CaskaydiaCove Nerd Font Propo;
+    font-size: 14px;
+    
+}
+
+@define-color bg rgba(33, 34, 44, 0.9);
+@define-color ac rgba(215, 145, 105, 1);
+@define-color fg rgba(248, 248, 242, 1);
+@define-color em rgba(248, 248, 242, 0.5);
+@define-color br rgba(255, 85, 85, 1);
+
+window#waybar {
+    background: @bg;
+    color: @fg
+    
+}
+
+.modules-right {
+	border-bottom: 3px solid @br;
+}
+#workspaces,
+#window {
+    border-radius: 5px;}
+#workspaces button {
+    padding: 0px 5px;
+    color:white;
+    margin: 0px 1px;
+}
+
+#window {
+	border-bottom: 3px solid @ac;
+}
+
+#workspaces button.active {
+    	color: @ac;
+    	transition: all 0.3s ease-in-out;
+	border-bottom: 3px solid @ac;
+}
+#workspaces button.empty {
+	color: @em;
+}
+
+#workspaces button:hover {
+  color: @ac;
+  background: transparent;
+    	transition: all 0.3s ease-in-out;
+}
+#media {
+	padding: 0px 10px;
+	border-radius: 10px;
+	border-bottom: 3px solid @ac;
+	
+}
+
+
+#window,
+#clock,
+#pulseaudio.1,
+#pulseaudio.2,
+#pulseaudio-slider#out,
+#backlight.1,
+#backlight.2,
+#backlight-slider,
+#cpu,
+#memory,
+#battery,
+#network,
+#bluetooth,
+#custom-player,
+#custom-time {
+  padding: 0px 10px;
+  color: white;
+}
+#custom-animasi{
+  color: lightgreen;
+  padding: 0px 10px;
+}
+#custom-power {
+  color: red;
+  padding: 0px 10px 0px 10px
+}
+#tray {
+ padding: 0px 10px;
+}
+#custom-power:hover,
+#custom-logo:hover {
+  color: @br;
+  padding: 0px 20px 0px 20px;
+    	transition: all 0.3s ease-in-out;
+}
+#custom-logo {
+    border-radius: 5px;
+	color:#8be9fd;
+	padding: 0px 10px;
+} 
+
+/* pulseaudio slider */ 
+#pulseaudio-slider slider {
+    min-height: 2px;
+    min-width: 2px;
+    opacity: 1;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 5px;
+    min-width: 50px;
+    border-radius: 5px;
+    background: white;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 50px;
+    background: @ac;
+}
+
+#pulseaudio-slider.muted highlight {
+    background-color: red;
+}
+
+/* backlight slider */ 
+#backlight-slider slider {
+    min-height: 2px;
+    min-width: 2px;
+    opacity: 1;
+    border: none;
+    box-shadow: none;
+}
+
+#backlight-slider trough {
+    min-height: 5px;
+    min-width: 50px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+#backlight-slider highlight {
+    min-width: 5px;
+    border-radius: 10px;
+    background-color: @ac;
+}
+

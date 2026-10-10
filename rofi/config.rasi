@@ -1,0 +1,88 @@
+configuration {
+    show-icons: true;
+    icon-theme: "dracula";
+    display-drun: "Aplikasi";
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+listview {
+    lines: 5;
+    spacing: 5px;
+    background-color: @bg;
+}
+
+* {
+    bg:       #303446;
+    fg:       #c6d0f5;
+    accent:   #626880;
+    background-color: @bg;
+    text-color: @fg;
+}
+
+window {
+    background-color: @bg;
+    border: 3px;
+    border-color: @accent;
+    width: 40%;
+    border-radius: 5px;
+}
+
+mainbox {
+    background-color: transparent;
+}
+
+inputbar {
+    childern:["prompt,entry"];
+    padding: 8px;
+    spacing:10px;
+    background-color: inherit;
+}
+
+prompt {
+    text-color: @fg;
+    vertical-align: 0.5;
+    padding : 8px;
+    background-color: transparent;
+  }
+entry {
+    placeholder: "Search...";
+    background-color: transparent;
+    text-color: @fg;
+    padding: 8px;
+    expand: true;
+    vertical-align: 0.5;
+    }
+
+
+element {
+    padding: 8px;
+    orientation: horizontal;
+	  border-color:@accent;
+    background-color: transparent;
+}
+
+element-text {
+      background-color:            inherit;
+      text-color:                  inherit;
+      cursor:                      inherit;
+  }
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+} 
+element selected.normal {
+    background-color: @accent;
+    text-color: @bg;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+}
+element-icon {
+    size: 20px;
+}
+

@@ -1,0 +1,150 @@
+*{
+    font-family: JetBrainsMono Nerd Font Propo;
+    font-size: 14px;
+}
+
+@define-color base rgba(48, 52, 70, 0.8);
+@define-color text rgb(198, 208, 245);
+@define-color button rgb(81, 87, 109);
+@define-color active rgb(131, 139, 167);
+@define-color accent rgb(198, 208,245);
+@define-color green rgb(186, 187, 241);
+@define-color border rgb(98, 104, 128);
+
+
+window#waybar {
+		background: @base;
+		border-bottom: 2px solid @text;}
+
+window#waybar.empty { background-color: transparent; }
+
+
+#workspaces {
+	background-color: transparent;
+  	font-size: 10px;
+}
+
+#workspaces button {
+  	  background-color: @active;
+      border-radius: 15px;
+    	color: @text;
+      padding: 0px 5px;
+    	margin: 5px 3px;
+      min-height: 5px;
+      min-width: 10px;
+}
+
+
+#workspaces button.active {
+    	background-color: @accent;
+    	color: @base;
+      font-weight: bold;
+    	border-radius: 15px;
+      min-width: 25px;
+  	  transition: all 0.3s ease-in-out;
+}
+#workspaces button.empty {
+  background-color: @button;
+}
+#workspaces button:hover {
+  background-color: @accent;
+}
+
+
+#window,
+#clock,
+#pulseaudio.1,
+#pulseaudio.2,
+#pulseaudio-slider#out,
+#backlight.1,
+#backlight.2,
+#backlight-slider,
+#cpu,
+#memory,
+#battery,
+#network,
+#bluetooth,
+#custom-player,
+#custom-time {
+  margin: 0px 3px;
+  padding: 0px 5px;
+  color: @text;
+}
+#custom-animasi{
+  color: @green;
+  margin: 0px 1px 5px;
+  padding: 0px 5px;
+}
+#tray {
+ color: @text;
+ padding: 0px 5px;
+}
+#custom-power:hover,
+#custom-logo:hover {
+  background-color: @accent;
+  color: @base;
+  padding: 0px 5px;
+  min-width: 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+#custom-power,
+#custom-logo {
+	color: @green;
+	padding: 0px 5px 0px 5px;
+ 	margin: 5px 5px;
+} 
+
+/* pulseaudio slider */ 
+#pulseaudio-slider slider {
+    min-height: 2px;
+    min-width: 2px;
+    opacity: 1;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 5px;
+    min-width: 50px;
+    border-radius: 5px;
+    background: @text;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 50px;
+    background: @accent;
+}
+
+#pulseaudio-slider.muted highlight {
+    background-color: @button;
+}
+
+/* backlight slider */ 
+#backlight-slider slider {
+    min-height: 2px;
+    min-width: 2px;
+    opacity: 1;
+    border: none;
+    box-shadow: none;
+}
+
+#backlight-slider trough {
+    min-height: 5px;
+    min-width: 50px;
+    border-radius: 5px;
+    background-color: @text;
+}
+
+#backlight-slider highlight {
+    min-width: 5px;
+    border-radius: 10px;
+    background-color: @accent;
+}
+
+#layout {
+	color: @text;
+	padding: 0px 5px;
+	font-weight: bold; }

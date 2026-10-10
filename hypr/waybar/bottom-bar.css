@@ -1,0 +1,30 @@
+
+*{
+    font-family: CaskaydiaCove Nerd Font;
+    font-size: 40px;
+    border-radius: 10px;
+}
+
+window#waybar {
+     background-color: transparent; 
+     background: #282A36;
+}
+
+#image.brave,
+#inage.thunar,
+#image.foot,
+#image.spotify,
+#image.telegram,
+#taskbar,
+#custom.logo{
+  padding: 0 5px;
+  border-radius: 10px
+}
+
+#taskbar button.active {
+  background: #6272a4
+}
+
+#custom.logo {
+  color: #50fa7b
+}

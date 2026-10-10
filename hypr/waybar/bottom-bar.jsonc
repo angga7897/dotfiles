@@ -1,0 +1,67 @@
+{
+"position": "bottom",
+"width": 300,
+"spacing": 2,
+"margin": 5,
+"modules-left": [
+  "image#brave",
+  "image#thunar",
+  "image#foot",
+  "image#spotify",
+  "image#telegram"
+],
+
+"modules-center":[
+  "wlr/taskbar"
+],
+
+"modules-right":[
+  "custom/logo"
+],
+
+"custom/logo": {
+	"format": "󰍜 ",
+  "on-click": "rofi -show drun",
+  "size": 40
+},
+
+  "image#brave": {
+	"path": "~/.config/mango/icon/brave-beta.svg",
+	"size": 40,
+	"on-click": "brave"
+},
+
+  "image#thunar": {
+	"path": "~/.config/mango/icon/org.xfce.thunar.svg",
+	"size": 40,
+	"on-click": "thunar"
+},
+  
+  "image#foot": {
+	"path": "~/.config/mango/icon/foot.svg",
+	"size": 40,
+	"on-click": "kitty"
+},
+
+  "image#spotify": {
+	"path": "~/.config/mango/icon/spotify-client.svg",
+	"size": 40,
+	"on-click": "spotify"
+},
+
+  "image#telegram": {
+	"path": "~/.config/mango/icon/telegram.svg",
+	"size": 40,
+	"on-click": "Telegram"
+},
+
+"wlr/taskbar": {
+	"format": "{icon}",
+	"icon-size": 40,
+	"icon-theme": "dracula-icons-main",
+	"tooltip-format": "{title}",
+	"on-click": "activate",
+	"on-click-middle": "close"
+}
+
+}

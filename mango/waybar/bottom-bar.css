@@ -1,0 +1,46 @@
+
+*{
+    font-family: CaskaydiaCove Nerd Font Propo;
+    font-size: 40px;
+}
+
+window#waybar {
+     background: black;
+     padding: 0px 5px;
+}
+
+#custom.chrome,
+#custom.explore,
+#custom.terminal,
+#custom.spotify,
+#custom.telegram,
+#taskbar,
+#custom.logo{
+  padding: 0 5px;
+}
+
+#taskbar button.active {
+  background: #6272a4
+}
+
+#custom.logo {
+  color: #50fa7b
+}
+
+#custom.chrome:hover,
+#custom.explore:hover,
+#custom.terminal:hover,
+#custom.spotify:hover,
+#custom.telegram:hover,
+#custom.logo:hover,
+#taskbar button:hover {
+  background: #6272a4;
+  transition: 0.2s ease;
+  padding: 0px 10px;
+}
+
+#custom.chrome {color: blue;}
+#custom.explore {color: yellow;}
+#custom.terminal {color: white;}
+#custom.spotify {color: green;}
+#custom.telegram {color: blue;}

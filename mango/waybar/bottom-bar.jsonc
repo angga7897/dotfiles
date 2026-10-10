@@ -1,0 +1,68 @@
+{
+"position": "bottom",
+"width": 300,
+"spacing": 10,
+"margin": 5,
+"modules-left": [
+  "custom/chrome",
+  "custom/explore",
+  "custom/terminal",
+  "custom/spotify",
+  "custom/telegram"
+],
+
+"modules-center":[
+  "wlr/taskbar"
+],
+
+"modules-right":[
+  "custom/logo"
+],
+
+"custom/logo": {
+	"format": "󰍜 ",
+  	"on-click": "rofi -show drun",
+  	"size": 40,
+	"tooltip": "false"
+},
+
+  "custom/chrome": {
+	"format": "",
+	"size": 40,
+	"on-click": "chromium"
+},
+
+  "custom/explore": {
+	"format": "",
+	"size": 40,
+	"on-click": "kitty -e yazi"
+},
+  
+  "custom/terminal": {
+	"format": "",
+	"size": 40,
+	"on-click": "kitty"
+},
+
+  "custom/spotify": {
+	"format": "",
+	"size": 40,
+	"on-click": "spotify"
+},
+
+  "custom/telegram": {
+	"size": 40,
+	"format": "",
+	"on-click": "Telegram"
+},
+
+"wlr/taskbar": {
+	"format": "{icon}",
+	"icon-size": 40,
+	"icon-theme": "dracula",
+	"tooltip-format": "{title}",
+	"on-click": "activate",
+	"on-click-middle": "close"
+}
+
+}
