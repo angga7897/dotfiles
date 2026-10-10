@@ -9,4 +9,4 @@ blueman-applet &
 nm-applet &
 
 # brightness
-brightnessctl set 10% &
+brightnessctl set 80% &

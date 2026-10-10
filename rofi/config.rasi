@@ -1,6 +1,6 @@
 configuration {
     show-icons: true;
-    icon-theme: "dracula";
+    icon-theme: "Tela-circle-dracula-dark";
     display-drun: "Aplikasi";
     font: "JetBrainsMono Nerd Font 10";
 }
