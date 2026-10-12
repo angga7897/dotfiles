@@ -243,19 +243,19 @@
 },
 
   "custom/player": {
-    "exec": "~/.config/mango/waybar/media.sh",
+    "exec": "~/.config/waybar/media.sh",
     "tooltip": false,
     "escape": true,
 },
 
   "custom/animasi": {
-    "exec": "~/.config/mango/waybar/animation.sh",
+    "exec": "~/.config/waybar/animation.sh",
     "tooltip": false,
     "escape": true,
 },
 
   "custom/time": {
-    "exec": "~/.config/mango/waybar/time.sh",
+    "exec": "~/.config/waybar/time.sh",
     "tooltip": false,
     "escape": true,
     "interval": 1,
