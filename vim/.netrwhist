@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/arch/dotfiles/suckless'
+let g:netrw_dirhist_3='/home/arch/dotfiles'
+let g:netrw_dirhist_2='/home/arch/dotfiles/qtile'
+let g:netrw_dirhist_1='/home/arch/dotfiles/suckless/dwm'
