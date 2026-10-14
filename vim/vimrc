@@ -1,0 +1,54 @@
+
+" =========================
+" General
+" =========================
+let mapleader = ","
+set nocompatible
+syntax on
+set encoding=utf-8
+set mouse=a
+
+" =========================
+" Line numbers
+" =========================
+set number
+
+" =========================
+" Cursor
+" =========================
+set cursorline
+set cursorcolumn
+set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+set scrolloff=5
+
+" =========================
+" Clipboard: copy outside Vim
+" =========================
+set clipboard=unnamedplus
+
+" =========================
+" Search
+" =========================
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" =========================
+" Indentation
+" =========================
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+
+" Copy seluruh file
+nnoremap <leader>y :%w !wl-copy<CR>
+" Copy teks yang dipilih
+vnoremap <leader>y :w !wl-copy<CR>
+
+" Background Vim tidak transparan
+set termguicolors
+highlight Normal guibg=#1a1b26
+highlight NormalNC guibg=#1a1b26
+highlight NonText guibg=#1a1b26
