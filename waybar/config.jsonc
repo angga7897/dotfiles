@@ -1,9 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "position": "top", // Waybar position (top|bottom|left|right)
-    //"height": 24, // Waybar height (to be removed for auto height)
     "spacing": 2, // Gaps between modules (4px)
-//    "margin": "5, 5, 0, 5",
     "modules-left": [
         "custom/logo",
 	"mango/workspaces",
@@ -27,7 +25,7 @@
 	"on-click": "activate",
 	"on-click-right": "toggle",
 	"overview-label": "",
-	"hide-empty": true
+//	"hide-empty": true
 },
 
 

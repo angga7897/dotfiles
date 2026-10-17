@@ -3,7 +3,7 @@
     font-size: 14px;
 }
 
-@define-color base rgba(48, 52, 70, 0.8);
+@define-color base rgb(48, 52, 70);
 @define-color text rgb(198, 208, 245);
 @define-color button rgb(81, 87, 109);
 @define-color active rgb(131, 139, 167);
@@ -11,47 +11,27 @@
 @define-color green rgb(186, 187, 241);
 @define-color border rgb(98, 104, 128);
 
-
-window#waybar {
-		background: @base;
-		border-bottom: 2px solid @text;}
-
+window#waybar { background: @base; }
 window#waybar.empty { background-color: transparent; }
-
-
-#workspaces {
-	background-color: transparent;
-  	font-size: 10px;
-}
-
+#workspaces { background: transparent;
+		padding: 0px 5px;
+		margin: 1px 1px}
 #workspaces button {
-  	  background-color: @active;
-      border-radius: 15px;
-    	color: @text;
-      padding: 0px 5px;
-    	margin: 5px 3px;
-      min-height: 5px;
-      min-width: 10px;
-}
-
-
+    	color: @button;
+      	padding: 0px 5px;
+	margin: 1px 2px;
+	min-width: 0px;
+	border-radius: 0px}
 #workspaces button.active {
-    	background-color: @accent;
-    	color: @base;
-      font-weight: bold;
-    	border-radius: 15px;
-      min-width: 25px;
-  	  transition: all 0.3s ease-in-out;
-}
-#workspaces button.empty {
-  background-color: @button;
-}
-#workspaces button:hover {
-  background-color: @accent;
-}
-
-
+    	color: @text;
+	font-weight: bold;
+	border-bottom: solid 2px @text;
+	transition: all 0.3s ease-in-out; }
+#workspaces button.empty { color: @button; }
+#workspaces button:hover { color: @accent;
+				background: transparent}
 #window,
+#layout,
 #clock,
 #pulseaudio.1,
 #pulseaudio.2,
@@ -66,85 +46,43 @@ window#waybar.empty { background-color: transparent; }
 #bluetooth,
 #custom-player,
 #custom-time {
-  margin: 0px 3px;
   padding: 0px 5px;
-  color: @text;
-}
+  margin: 1px 2px;
+  color: @text;}
 #custom-animasi{
-  color: @green;
-  margin: 0px 1px 5px;
-  padding: 0px 5px;
-}
+  color: @text;
+  padding: 0px 5px; }
 #tray {
  color: @text;
- padding: 0px 5px;
-}
+ padding: 0px 5px; }
 #custom-power:hover,
 #custom-logo:hover {
-  background-color: @accent;
-  color: @base;
+  color: @green;
   padding: 0px 5px;
-  min-width: 10px;
-  border-radius: 15px;
-  transition: all 0.3s ease-in-out;
-}
+  transition: all 0.3s ease-in-out; }
 #custom-power,
 #custom-logo {
 	color: @green;
-	padding: 0px 5px 0px 5px;
- 	margin: 5px 5px;
-} 
-
-/* pulseaudio slider */ 
+	padding: 0px 5px;
+	margin: 1px 5px}
+#backlight-slider slider,
 #pulseaudio-slider slider {
     min-height: 2px;
     min-width: 2px;
     opacity: 1;
     background-image: none;
     border: none;
-    box-shadow: none;
-}
-
+    box-shadow: none; }
+#backlight-slider trough,
 #pulseaudio-slider trough {
     min-height: 5px;
     min-width: 50px;
     border-radius: 5px;
-    background: @text;
-}
-
+    background: @button; }
+#backlight-slider highlight,
 #pulseaudio-slider highlight {
     min-width: 5px;
     border-radius: 50px;
-    background: @accent;
-}
-
+    background: @accent; }
 #pulseaudio-slider.muted highlight {
-    background-color: @button;
-}
-
-/* backlight slider */ 
-#backlight-slider slider {
-    min-height: 2px;
-    min-width: 2px;
-    opacity: 1;
-    border: none;
-    box-shadow: none;
-}
-
-#backlight-slider trough {
-    min-height: 5px;
-    min-width: 50px;
-    border-radius: 5px;
-    background-color: @text;
-}
-
-#backlight-slider highlight {
-    min-width: 5px;
-    border-radius: 10px;
-    background-color: @accent;
-}
-
-#layout {
-	color: @text;
-	padding: 0px 5px;
-	font-weight: bold; }
+    background-color: @button; }
