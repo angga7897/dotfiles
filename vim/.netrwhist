@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/arch/dotfiles/vim'
+let g:netrw_dirhist_6='/home/arch/dotfiles'
+let g:netrw_dirhist_5='/home/arch/dotfiles/nvim'
 let g:netrw_dirhist_4='/home/arch/dotfiles/suckless'
 let g:netrw_dirhist_3='/home/arch/dotfiles'
 let g:netrw_dirhist_2='/home/arch/dotfiles/qtile'
