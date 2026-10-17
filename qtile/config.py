@@ -4,7 +4,7 @@ from collections.abc import Callable
 
 import libqtile.resources
 from libqtile import bar, layout, qtile, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Match, Output, Screen
+from libqtile.config import Click, Drag, Group, Key, Match, Output, Screen, Rule
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
@@ -86,7 +86,12 @@ for vt in range(1, 8):
     )
 
 
-groups = [Group(i) for i in "123456789"]
+groups = [
+    Group("1"),
+    Group("2"),
+    Group("3"),
+    Group("4"),
+]
 
 for i in groups:
     keys.extend(
@@ -142,7 +147,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="JetBrainsMono Nerd Fonts",
+    font="JetBrainsMono Nerd Fonts Bold",
     fontsize=14,
     padding=3,
 )
@@ -169,11 +174,13 @@ screens = [
                 widget.WindowName(
                     padding=3,
                     max_chars=30,),
-                widget.PulseVolume(
-                   fmt="󰓃 {} ", ),
-                widget.Sep(padding=3,),
+               widget.GenPollText(
+                    update_interval=1,
+                    func=lambda:"󰓃 " + subprocess.check_output(
+                       ["pamixer", "--get-volume-human"]
+                       ).decode().strip(),),
                 widget.Clock(
-                    format=" %A, %d %B %Y %H:%M ",
+                    format="| %A, %d %B %Y %H:%M ",
                     padding=3,),
                 widget.Sep(padding=3,),
                 widget.Systray(
@@ -275,3 +282,4 @@ wmname = "LG3D"
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.Popen([home])
+

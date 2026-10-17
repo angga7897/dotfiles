@@ -52,3 +52,6 @@ set termguicolors
 highlight Normal guibg=#1a1b26
 highlight NormalNC guibg=#1a1b26
 highlight NonText guibg=#1a1b26
+
+" Copy otomatis setiap kali yank (X11)
+autocmd TextYankPost * call system('xclip -selection clipboard', @")
