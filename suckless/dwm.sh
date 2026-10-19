@@ -2,7 +2,7 @@
 
 nm-applet &
 dunst &
-~/.config/suckless/bardwm.sh &
+~/.config/suckless/status.sh &
 picom &
 xwallpaper --stretch ~/.config/suckless/wallpaper.jpg &
 xrdb -merge ~/.Xresources &
