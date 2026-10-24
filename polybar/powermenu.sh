@@ -14,7 +14,11 @@ chosen=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu:")
 # Eksekusi perintah sesuai pilihan
 case $chosen in
     $lock)
-        i3lock -c 000000
+        i3lock  --indicator \
+		--blur 5 \
+		--clock \
+		--date-color ffffff \
+		--time-color ffffff \
         ;;
     $logout)
         i3-msg exit

@@ -193,8 +193,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #theme
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 3
+default_floating_border pixel 3
 gaps inner 5px
 gaps outer 10px
 

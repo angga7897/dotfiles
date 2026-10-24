@@ -5,15 +5,13 @@ STEP=5
 
 case "$1" in
     up)
-        pamixer -i "$STEP"
-	pamixer -u
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
         ;;
     down)
-        pamixer -d "$STEP"
-	pamixer -u
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
         ;;
     mute)
-        pamixer -t
+        set-sink-mute @DEFAULT_SINK@ toggle
         ;;
     *)
         echo "Usage: $0 {up|down|mute}"

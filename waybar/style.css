@@ -3,7 +3,7 @@
     font-size: 14px;
 }
 
-@define-color base rgb(48, 52, 70);
+@define-color base rgba(48, 52, 70, 0.8);
 @define-color text rgb(198, 208, 245);
 @define-color button rgb(81, 87, 109);
 @define-color active rgb(131, 139, 167);
