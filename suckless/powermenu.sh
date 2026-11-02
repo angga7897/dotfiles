@@ -10,7 +10,12 @@ options=$(printf "%s\n" "$lock" "$out" "$reboot" "$shutdown")
 chosen=$(echo "$options" | rofi -dmenu -i -p 'Powermenu' -theme-str 'window {lines: 4;}')
 
 case "$chosen" in
-    "$lock") i3lock ;;
+    "$lock") i3lock \
+	    	--indicator \
+		--blur 5 \
+		--clock \
+		--date-color ffffff \
+		--time-color ffffff \ ;;
     "$out") loginctl terminate-user "$USER" ;; # atau: killall dwm / pkill dwm
     "$reboot") systemctl reboot ;;
     "$shutdown") systemctl poweroff ;;

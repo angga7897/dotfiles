@@ -1,6 +1,7 @@
 #! /bin/bash
 
 nm-applet &
+blueman-applet &
 dunst &
 ~/.config/suckless/status.sh &
 picom &
