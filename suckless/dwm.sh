@@ -4,7 +4,7 @@ nm-applet &
 dunst &
 ~/.config/suckless/status.sh &
 picom &
-xwallpaper --stretch ~/.config/suckless/wallpaper.jpg &
+~/.fehbg
 xrdb -merge ~/.Xresources &
 setroot -cursor_name left_ptr &
 xset s off -dpms &

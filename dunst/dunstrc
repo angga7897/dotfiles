@@ -89,7 +89,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    transparency = 0
+    transparency = 20
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -111,7 +111,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#626880"
+    frame_color = "#7aa2f7"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -361,14 +361,14 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#303446"
-    foreground = "#888888"
+    background = "#000000"
+    foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with low urgency
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#303446"
+    background = "#000000"
     foreground = "#ffffff"
     timeout = 10
     override_pause_level = 30

@@ -1,8 +1,8 @@
 configuration {
     show-icons: true;
-    icon-theme: "Tela-circle-dracula-dark";
+    icon-theme: "dracula-icons";
     display-drun: "Aplikasi";
-    font: "JetBrainsMono Nerd Font 10";
+    font: "JetBrainsMono Nerd Font 12";
 }
 
 listview {
@@ -12,9 +12,9 @@ listview {
 }
 
 * {
-    bg:       #303446;
-    fg:       #c6d0f5;
-    accent:   #626880;
+    bg:       #000000;
+    fg:       #ffffff;
+    accent:   #7aa2f7;
     background-color: @bg;
     text-color: @fg;
 }
@@ -35,7 +35,7 @@ inputbar {
     childern:["prompt,entry"];
     padding: 8px;
     spacing:10px;
-    background-color: inherit;
+    background-color: transparent;
 }
 
 prompt {
@@ -57,7 +57,7 @@ entry {
 element {
     padding: 8px;
     orientation: horizontal;
-	  border-color:@accent;
+    border-color:@accent;
     background-color: transparent;
 }
 
@@ -83,6 +83,6 @@ element selected.normal {
     border-radius: 5px;
 }
 element-icon {
-    size: 20px;
+    size: 24px;
 }
 
