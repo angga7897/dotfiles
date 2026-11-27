@@ -4,15 +4,17 @@
     "spacing": 2, // Gaps between modules (4px)
     "modules-left": [
         "custom/logo",
-	"mango/workspaces",
-	"mango/layout",
-	"mango/window",
+	"hyprland/workspaces",
+	"hyprland/window",
+//	"mango/workspaces",
+//	"mango/layout",
+//	"mango/window",
         "group/media"
     ],
     "modules-center": [  ],
     "modules-right": [
-        "group/volume",
-        "group/brightness",
+       // "group/volume",
+       // "group/brightness",
         "group/hardware",
 	//"group/koneksi",
         "tray",
@@ -55,8 +57,7 @@
     },
     "modules": [
         "pulseaudio#1",
-        "pulseaudio/slider#out",
-        "pulseaudio#2" ]
+        "pulseaudio/slider#out" ]
 },
 
 "group/brightness": {
@@ -68,9 +69,7 @@
     },
       "modules": [
       "backlight#1",
-      "backlight/slider",
-      "backlight#2"
-    ]
+      "backlight/slider" ]
   },
 "group/hardware":{
   "orientation": "inherit",
@@ -80,9 +79,13 @@
       "transition-left-to-right": false
     },
   "modules":[
+	"custom/open",
     "battery",
     "memory",
-    "cpu"
+    "cpu",
+    "group/volume",
+    "group/brightness",
+    "group/koneksi"
   ]
 },
 
@@ -95,7 +98,7 @@
 },
 
 "pulseaudio#1": {
-	"format": "{icon}",
+	"format": "{icon} {volume}%",
 	"format-bluetooth": "{icon} {volume}%",
 	"format-muted": "",
 	"format-icons": {
@@ -128,7 +131,7 @@
 
 "backlight#1": {
 	"device": "intel_backlight",
-	"format": "{icon}",
+	"format": "{icon} {percent}%",
   "tooltip-format": "brightness",
 	"format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"]
 },
@@ -168,19 +171,19 @@
 	"format" : "󰍃",
 	"tooltip": true,
   	"tooltip-format": "Power Menu",
-	//"menu": "on-click",
-	//"menu-file": "~/.config/mango/waybar/power_menu.xml",
-	//"menu-actions": {
-	//"shutdown": "systemctl poweroff",
-	//"reboot": "systemctl reboot",
-	//"lock": "swaylock",
-	//"suspend": "systemctl suspend",
-	//"hibernate": "systemctl hibernate"}
-	"on-click": "wlogout"
+	"menu": "on-click",
+	"menu-file": "~/.config/waybar/power_menu.xml",
+	"menu-actions": {
+	"shutdown": "systemctl poweroff",
+	"reboot": "systemctl reboot",
+	"lock": "swaylock",
+	"log out": "loginctl terminate-user $USER",
+	"hibernate": "systemctl hibernate"}
+	//"on-click": "wlogout"
 },
 
 "custom/logo": {
-  "format": "󰣇",
+  "format": "",
   "tooltip": false,
   "on-click": "rofi -show drun"
 },
@@ -261,6 +264,28 @@
 
 "mango/layout": {
     "format": "[ {symbol} ] ",
-}
+},
+
+"custom/open": {
+  "format": "",
+  "tooltip": false,
+},
+
+"hyprland/workspaces": {
+	"format": "{}",
+	"format-icons": {
+				"active": "",
+				"default": ""
+			},
+	"persistent-workspaces": { "*": 4 }
+},
+
+
+  "hyprland/window": {
+    	"format": "{class}",
+    	"max-length": 25
+    }
+
 
 }
+

@@ -32,7 +32,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal = "kitty"
-local music = "kitty -e cmus"
+local music = "kitty -e cliamp ~/Music"
 local fileManager = "kitty -e yazi"
 local menu = "rofi -show drun -show-icons"
 
@@ -46,14 +46,12 @@ local menu = "rofi -show drun -show-icons"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
-	hl.exec_cmd("/home/arch/.config/hypr/waybar/waybar.sh")
-	hl.exec_cmd("/home/arch/.config/hypr/scripts/aria2.sh")
-	hl.exec_cmd("swaybg -i /home/arch/.config/hypr/wallpaper.jpg -m fill")
+	hl.exec_cmd("/home/utun/.config/waybar/waybar.sh")
+	hl.exec_cmd("/home/utun/.app/mdm.AppImage /startup")
+	hl.exec_cmd("swaybg -i /home/utun/.config/hypr/wallpaper.jpg -m fill")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("blueman-applet")
-	hl.exec_cmd("xdg-desktop-portal")
-	hl.exec_cmd("xdg-desktop-portal-hyprland")
-	hl.exec_cmd("dunst --config /home/arch/.config/hypr/dunst/dunstrc")
+	hl.exec_cmd("dunst --config /home/utun/.config/hypr/dunst/dunstrc")
 end)
 
 -------------------------------
@@ -279,7 +277,7 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.layout("swapwithmaster master"))
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("~/.config/hypr/waybar/waybar.sh"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("~/.config/waybar/waybar.sh"))
 hl.bind("Print", hl.dsp.exec_cmd("~/.config/hypr/scripts/hyprshot.sh"), { locked = true, repeting = true })
 
 -- Switch workspaces with mainMod + [0-9]

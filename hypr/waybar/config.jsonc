@@ -53,8 +53,7 @@
     },
     "modules": [
         "pulseaudio#1",
-        "pulseaudio/slider#out",
-        "pulseaudio#2" ]
+        "pulseaudio/slider#out" ]
 },
 
 "group/brightness": {
@@ -66,9 +65,7 @@
     },
       "modules": [
       "backlight#1",
-      "backlight/slider",
-      "backlight#2"
-    ]
+      "backlight/slider"]
   },
 "group/hardware":{
   "orientation": "inherit",
@@ -93,7 +90,7 @@
 },
 
 "pulseaudio#1": {
-	"format": "{icon}",
+	"format": "{icon} {volume}%",
 	"format-bluetooth": "{icon} {volume}%",
 	"format-muted": "",
 	"format-icons": {
@@ -126,7 +123,7 @@
 
 "backlight#1": {
 	"device": "intel_backlight",
-	"format": "{icon}",
+	"format": "{icon} {percent}%",
   "tooltip-format": "brightness",
 	"format-icons": ["󰃜", "󰃛", "󰃚"]
 },

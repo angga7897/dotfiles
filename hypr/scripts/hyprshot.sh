@@ -7,18 +7,15 @@ TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
 
 choice=$(printf '%s\n' \
     "Fullscreen" \
-    "Window" \
     "Region" |
-    rofi -dmenu -theme-str 'listview { lines: 3; }' -i -p "Screenshot")
+    rofi -dmenu -theme-str 'listview { lines: 2; }' -i -p "Screenshot")
 
 case "$choice" in
     "Fullscreen")
-        hyprshot -m output -o "$DIR" -f "Screenshot_$TIMESTAMP.png"
-        ;;
-    "Window")
-        hyprshot -m window -o "$DIR" -f "Screenshot_$TIMESTAMP.png"
+        sleep 1
+	grim "$DIR/hypr_$TIMESTAMP.png"
         ;;
     "Region")
-        hyprshot -m region -o "$DIR" -f "Screenshot_$TIMESTAMP.png"
+	    grim -g "$(slurp)" "$DIR/hypr_$TIMESTAMP.png"
         ;;
 esac

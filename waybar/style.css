@@ -1,5 +1,5 @@
 *{
-    font-family: JetBrainsMono Nerd Font Propo;
+    font-family: CaskaydiaCove Nerd Font Propo;
     font-size: 14px;
 }
 
@@ -12,7 +12,7 @@
 @define-color border rgb(98, 104, 128);
 
 window#waybar { background: @base; }
-window#waybar.empty { background-color: transparent; }
+window#waybar.empty { background-color: @base; }
 #workspaces { background: transparent;
 		padding: 0px 5px;
 		margin: 1px 1px}

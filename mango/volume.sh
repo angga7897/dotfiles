@@ -5,18 +5,14 @@ STEP=5
 
 case "$1" in
     up)
-	pactl set-sink-volume @DEFAULT_SINK@ +5%
-        ;;
+	wpctl set-volume @DEFAULT_SINK@ 5%+ ;;
     down)
-	pactl set-sink-volume @DEFAULT_SINK@ -5%
-        ;;
+	wpctl set-volume @DEFAULT_SINK@ 5%- ;;
     mute)
-        set-sink-mute @DEFAULT_SINK@ toggle
-        ;;
+        wpctl set-mute @DEFAULT_SINK@ toggle ;;
     *)
         echo "Usage: $0 {up|down|mute}"
-        exit 1
-        ;;
+        exit 1 ;;
 esac
 
 VOLUME=$(pamixer --get-volume)
