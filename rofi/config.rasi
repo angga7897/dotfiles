@@ -2,7 +2,7 @@ configuration {
     show-icons: true;
     icon-theme: "dracula-icons";
     display-drun: "Aplikasi";
-    font: "JetBrainsMono Nerd Font 12";
+    font: "CaskaydiaCove Nerd Font 12";
 }
 
 listview {
