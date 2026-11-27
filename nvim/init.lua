@@ -5,7 +5,7 @@ vim.cmd("syntax on")
 -- Nomor baris
 vim.opt.number = true
 vim.opt.cursorline = true
-vim.opt.relativenumber = true
+
 
 -- Gunakan warna terminal
 vim.opt.termguicolors = true
